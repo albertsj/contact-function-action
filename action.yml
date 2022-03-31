@@ -1,0 +1,12 @@
+name: 'CONTACT Function Deploy'
+description: 'Deploy an environment to the CONTACT FaaS infrastructure'
+inputs:
+  source-dir:
+    description: "Root directory of the source"
+  token:
+    description: "Access token"
+runs:
+  using: "composite"
+  steps:
+    - run: deploy.sh
+      shell: bash
